@@ -1,0 +1,14 @@
+# (c) 2019 - Bert Van Poecke
+
+# Environment files
+/penv
+/nenv
+
+# Output folder
+/dist
+
+# Node modules
+/node_modules
+
+# Package lock
+/package-lock.json
