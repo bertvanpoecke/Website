@@ -1,14 +1,14 @@
 {
-    "name": "npm-build-tool-template",
+    "name": "website",
     "version": "1.0.0",
-    "description": "A template for building apps with npm",
+    "description": "Personal website of Bert Van Poecke",
     "keywords": [
-        "template"
+        "website"
     ],
-    "homepage": "https://github.com/bertvanpoecke/project#readme",
+    "homepage": "https://github.com/bertvanpoecke/Website#readme",
     "repository": {
         "type": "git",
-        "url": "https://github.com/bertvanpoecke/npm-build-tool-template.git"
+        "url": "https://github.com/bertvanpoecke/Website.git"
     },
     "license": "MIT",
     "author": "Bert Van Poecke (https://bertvanpoecke.github.io)",
@@ -28,7 +28,7 @@
         "watch:other": "watch 'npm run build:other' src/assets/fonts src/assets/img",
         "test": "echo 'No test scripts defined.' ",
         "watch:test": "echo 'No test scripts defined.'",
-        "open:prod": "opener http://example.com",
+        "open:prod": "opener https://bertvanpoecke.github.io",
         "open:dev": "wait-on http://localhost:9090 && opener http://localhost:9090",
         "deploy": "git subtree push --prefix dist origin gh-pages",
         "serve": "http-server -p 9090 dist/",
@@ -38,9 +38,7 @@
     "devDependencies": {
         "browserify": "^16.2.3",
         "http-server": "^0.11.1",
-        "jshint": "^2.10.2",
         "live-reload": "^1.1.0",
-        "minifyify": "^7.3.5",
         "node-sass": "^4.11.0",
         "npm-run-all": "^4.1.5",
         "opener": "^1.5.1",
