@@ -1,3 +1,66 @@
-p{
-	font-size: 100pt; 
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed:light");
+
+$font-stack: 'Open Sans', Helvetica, sans-serif;
+$font-stack-name: 'Roboto Condensed', Helvetica, sans-serif;
+$font-style-name: 'Light';
+
+// $primary-color: #f2f2f2;
+// $background-color: #222;
+// $link-color: #000099;
+// $link-color-hover: #0066ff;
+
+$primary-color: #000000ad;
+$background-color: #ffffff;
+// $background-color: #d6d6d6;
+$link-color: #000099;
+$link-color-hover: #0066ff;
+
+$content-info-top: 30%;
+$content-info-left: 15%;
+
+html,
+body {
+	display: flex;
+	align-items: stretch;
+	align-content: stretch;
+	width: 100%;
+	height: 100%;
+	margin:0;
+	padding:0;
+	background: $background-color;
+
+	font: 100% $font-stack;
+	color: $primary-color;
+}
+
+.content_info {
+	position: absolute;
+	width: 75%;
+	top: $content-info-top;
+	left: $content-info-left;
+
+	h1 {
+		font-family: $font-stack-name;
+		font-style: $font-style-name;
+		font-size: 5em;
+	}
+
+	a {
+		text-decoration: none;
+		color: $primary-color;
+		border-bottom: 1px dotted;
+
+		&:hover {
+			color: $link-color-hover;
+			border-bottom: none;
+		}
+	}
+}
+
+#canvas {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
 }
