@@ -26,10 +26,11 @@ function get_node_count()
         return 200;
 }
 
-var node_count = get_node_count(),
-    nodes = [],
+var node_count = get_node_count();
+var nodes = [];
     // colors = ["#e6e6e6"];
-    colors = ["#d6d6d6"];
+const colors = ["#d6d6d6"];
+const maxVertexAlpha = 0.6;
 
 console.log( node_count );
 
@@ -129,7 +130,7 @@ function draw_vertices()
             if ( d < 200 )
             {
                 context.beginPath();
-                context.globalAlpha = (200 - d) / (200 - 0);
+                context.globalAlpha = (200 - d) / (200 - 0) * maxVertexAlpha;
                 context.globalCompositeOperation = 'destination-over';
                 context.lineWidth = 1;
                 context.moveTo(node1.x, node1.y);
