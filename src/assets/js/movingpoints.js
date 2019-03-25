@@ -27,12 +27,12 @@ function get_node_count()
 }
 
 var node_count = get_node_count();
+// console.log( node_count );
+
 var nodes = [];
     // colors = ["#e6e6e6"];
 const colors = ["#d6d6d6"];
 const maxVertexAlpha = 0.6;
-
-console.log( node_count );
 
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
