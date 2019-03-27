@@ -1,3 +1,3 @@
 # Personal website
 
-This website is deployed on [https://bertvanpoecke.github.com](https://bertvanpoecke.github.com).
+This repository contains the source files for my personal website, which is deployed on [https://bertvanpoecke.github.com](https://bertvanpoecke.github.com).
