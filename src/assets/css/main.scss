@@ -4,22 +4,22 @@ $font-stack: 'Open Sans', Helvetica, sans-serif;
 $font-stack-name: 'Roboto Condensed', Helvetica, sans-serif;
 $font-style-name: 'Light';
 
-$primary-color: #000000ad;
 $background-color: #ffffff;
-$link-color: #000099;
-$link-color-hover: #0066ff;
+$content-background: linear-gradient( to top, black, #545454 );
+$primary-color: #ffffff;
+$link-color: $primary-color;
+$link-color-hover: #287efe;
 
-$content-info-top: 30%;
-$content-info-left: 15%;
-
-$button-size: 80px;
+$button-size: 40px;
 $button-border-width: 2px;
+
+$break-small: 520px;
+$break-large: 1200px;
+$height-small: 700px;
+$height-small-top: 300px;
 
 html,
 body {
-	display: flex;
-	align-items: stretch;
-	align-content: stretch;
 	width: 100%;
 	height: 100%;
 	margin: 0;
@@ -40,16 +40,17 @@ a {
 	}
 }
 
-.content_info {
-	position: absolute;
-	width: 75%;
-	top: $content-info-top;
-	left: $content-info-left;
-
+header {
 	h1 {
 		font-family: $font-stack-name;
 		font-style: $font-style-name;
-		font-size: 5em;
+		font-size: 4em;
+		margin-top: 0;
+	}
+
+	p {
+		margin-top: 50px;
+		font-size: .9em;
 	}
 
 	a {
@@ -59,6 +60,53 @@ a {
 			border-bottom: none;
 		}
 	}
+}
+
+.split {
+	height: $height-small;
+	overflow-x: hidden;
+	position: relative;
+
+	@media screen and (min-width: $break-small) {
+		height: 100%;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+	}
+}
+
+.left {
+	width: 67%;
+	left: 0;
+
+	@media screen and (max-width: $break-large) {
+		width: 50%;
+	}
+	@media screen and (max-width: $break-small) {
+		height: $height-small-top;
+		width: 100%;
+	}
+}
+
+.right {
+	width: 33%;
+	right: 0;
+	background: $content-background;
+
+	@media screen and (max-width: $break-large) {
+		width: 50%;
+	}
+	@media screen and (max-width: $break-small) {
+		width: 100%;
+	}
+}
+
+.content_info {
+	position: absolute;
+	width: 80%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .links {
@@ -79,15 +127,22 @@ a {
 	height: $button-size;
 	border-radius: 50%;
 	border: $button-border-width solid;
-	font-size: 2em;
+	font-size: 1em;
 	float: left;
 	margin-right: 0.5em;
 }
 
 #canvas {
-	position: relative;
+	position: absolute;
 	display: block;
 	width: 100%;
 	height: 100%;
 	margin: 0 auto;
+}
+
+.hi {
+	font-weight: bold;
+	font-size: 4em;
+	width: 150px;
+	height: 150px;
 }

@@ -30,8 +30,10 @@ var node_count = get_node_count();
 // console.log( node_count );
 
 var nodes = [];
-    // colors = ["#e6e6e6"];
-const colors = ["#d6d6d6"];
+// const colors = ["#e6e6e6"];
+// const colors = ["#d6d6d6"];
+const colors = ["#545454"];
+
 const maxVertexAlpha = 0.6;
 
 var canvas = document.getElementById('canvas');
